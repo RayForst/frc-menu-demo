@@ -1,0 +1,23 @@
+{% extends "_layout.twig" %}
+
+{% block title %}UI -
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <p>
+        <h2>Fonts</h2>
+        <h3>Font example - regular</h3>
+        <h3 class="font--it">Font example - italic</h3>
+        <h3 class="font--bold">Font example - bold</h3>
+        <h3 class="font--bold-it">Font example - bold italic</h3>
+        <h3 class="font--light">Font example - light</h3>
+        <h3 class="font--light-it">Font example - light italic</h3>
+        <h3 class="font--semi">Font example - semibold</h3>
+        <h3 class="font--semi-it">Font example - semibold italic</h3>
+    </p>
+{% endblock %}
+
+{% block script %}
+    {# {% include 'components/map/_map-script.twig' %} #}
+{% endblock %}

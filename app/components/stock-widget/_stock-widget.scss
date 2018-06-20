@@ -1,0 +1,44 @@
+.stock-widget {
+  background: #ebf0f5;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  padding: 12px 20px;
+  font-size: 13px;
+  line-height: 15px;
+  width: 224px;
+
+  @media #{$m-tablet--wide} {
+    right: 16px;
+    width: auto;
+  }
+
+  @media #{$m-desktop} {
+    right: 32px;
+  }
+
+  @media #{$m-desktop--wide} {
+    right: 64px;
+  }
+
+  &__difference {
+    margin-left: 4px;
+    &--up {
+      color: #00af00;
+
+      &:before {
+        content: "↑";
+        font-family: Arial, sans-serif;
+      }
+    }
+
+    &--down {
+      color: red;
+
+      &:before {
+        content: "↓";
+        font-family: Arial, sans-serif;
+      }
+    }
+  }
+}

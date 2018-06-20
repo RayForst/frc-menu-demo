@@ -1,0 +1,42 @@
+.accordeon {
+  &__title {
+    position: relative;
+
+    @media #{$m-till-tablet--wide} {
+      &:after {
+        position: absolute;
+        content: "";
+        width: 11px;
+        height: 1px;
+        background: #1e2d37;
+        top: 50%;
+        margin-top: -1px;
+        right: 16px;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 11px;
+        height: 1px;
+        background: #1e2d37;
+        top: 50%;
+        margin-top: -1px;
+        right: 16px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__open {
+    position: relative;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+}

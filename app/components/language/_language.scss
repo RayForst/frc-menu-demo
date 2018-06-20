@@ -1,0 +1,17 @@
+.language {
+  display: flex;
+
+  &__link {
+    font-weight: bold;
+    font-size: 13px;
+    color: $c_dark-blue;
+    padding: 20px 10px;
+
+    @media #{$m-tablet--wide} {
+      padding: 20px 8px;
+    }
+    &--active {
+      color: $c_yellow;
+    }
+  }
+}

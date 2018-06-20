@@ -1,0 +1,235 @@
+.header {
+  $this: &;
+  background: #fff;
+  padding: 25px 27px 23px 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media #{$m-tablet} {
+    padding: 29px 27px 27px 27px;
+  }
+
+  @media #{$m-tablet--wide} {
+    padding: 41px 38px 33px 44px;
+    align-items: flex-start;
+  }
+
+  @media #{$m-desktop} {
+    padding: 49px 38px 57px 62px;
+  }
+
+  @media #{$m-desktop--wide} {
+    padding: 49px 70px 73px 70px;
+  }
+
+  &--compact {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    .stock-widget {
+      transform: translateY(-40px);
+    }
+    .header__logo {
+      transform: translateY(2px);
+
+      @media #{$m-tablet--wide} {
+        transform: translateY(7px);
+      }
+    }
+  }
+  &__link-wrap {
+    &:last-of-type > #{$this}__link {
+      border-bottom: 1px solid #ebf0fa;
+
+      @media #{$m-tablet--wide} {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $c_dark-blue;
+    font-weight: bold;
+    padding: 16px;
+    cursor: pointer;
+    border-top: 1px solid #ebf0fa;
+    padding-right: 32px;
+
+    &--active {
+      color: $c_yellow;
+    }
+
+    @media #{$m-tablet--wide} {
+      padding: 20px 10px;
+      border: none;
+      font-size: 13px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 48px;
+        background: #ffdc00;
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        margin-top: -42px;
+        z-index: 9;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease;
+        visibility: hidden;
+      }
+
+      &--hover {
+        &:before {
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @media #{$m-desktop} {
+      padding: 18px 19px;
+      font-size: 15px;
+
+      &:before {
+        height: 56px;
+        top: 0px;
+        margin-top: -50px;
+      }
+    }
+  }
+
+  &__slide-content {
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media #{$m-tablet--wide} {
+      width: auto;
+    }
+  }
+
+  &__burger-trigger {
+    padding: 10px;
+    display: inline-flex;
+    cursor: pointer;
+    @media #{$m-tablet--wide} {
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-left: auto;
+    display: inline-flex;
+    padding: 4px;
+
+    @media #{$m-tablet--wide} {
+      margin-left: 72px;
+    }
+
+    @media #{$m-desktop} {
+      margin-left: 80px;
+    }
+  }
+
+  &__menu {
+    display: block;
+    position: fixed;
+    width: 256px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: transform 0.4s ease;
+    transform: translateX(100%);
+    overflow: auto;
+    padding: 22px 16px;
+    background: #fff;
+    padding-top: 53px;
+
+    &--open {
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media #{$m-tablet--wide} {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: static;
+      transform: none;
+      padding: 0;
+      align-items: center;
+      visibility: visible;
+      overflow: initial;
+      align-items: flex-start;
+      transition: none;
+    }
+  }
+
+  &__switch {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+
+    @media #{$m-tablet--wide} {
+      margin-left: auto;
+      padding: 0;
+    }
+  }
+
+  &__navigation {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+
+    @media #{$m-tablet--wide} {
+      margin-top: 0;
+      order: 0;
+      display: flex;
+      margin-left: auto;
+      flex-direction: row;
+    }
+  }
+
+  &__submenu {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 8px 0 4px 0;
+  }
+
+  &__submenu-link {
+    font-size: 13px;
+    text-transform: initial;
+    font-weight: normal;
+    color: #1e2d37;
+    padding: 10px 16px;
+    display: block;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__logo {
+    top: 2px;
+    position: relative;
+    width: 176px;
+
+    @media #{$m-tablet--wide} {
+      top: -5px;
+    }
+  }
+}
