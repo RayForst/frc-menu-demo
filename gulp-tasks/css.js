@@ -9,6 +9,7 @@ module.exports = function(gulp, plugins, options) {
       throwError: true,
     }),
   ]
+  console.log('is prod', options.isProd)
 
   return plugins
     .multipipe(
@@ -23,7 +24,11 @@ module.exports = function(gulp, plugins, options) {
         ],
       }),
       plugins.if(!options.isProd, plugins.sourcemaps.write()),
-      plugins.if(options.isProd, plugins.autoprefixer(['> 1%'], { cascade: false })),
+      plugins.if(options.isProd,  plugins.postcss([
+        plugins.autopref({
+          browsers: ['> 1%', 'iOS > 6', 'not ie <= 10']
+        })
+      ])),
       // plugins.postcss(processors, { syntax: plugins.syntax_scss }),
       plugins.if(
         options.isProd,

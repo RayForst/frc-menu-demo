@@ -9,6 +9,7 @@ plugins.pngquant = require('imagemin-pngquant')
 plugins.reporter = require('postcss-reporter')
 plugins.stylelint = require('stylelint')
 plugins.syntax_scss = require('postcss-scss')
+plugins.autopref = require('autoprefixer');
 
 const CONFIG = {
   src: path.join(__dirname, 'app'),
