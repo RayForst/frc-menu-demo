@@ -30,10 +30,10 @@ module.exports = function(gulp, plugins, options) {
         })
       ])),
       // plugins.postcss(processors, { syntax: plugins.syntax_scss }),
-      plugins.if(
-        options.isProd,
-        plugins.cssnano({ zindex: false, minifyFontValues: false, discardUnused: false }),
-      ),
+      // plugins.if(
+      //   options.isProd,
+      //   plugins.cssnano({ zindex: false, minifyFontValues: false, discardUnused: false }),
+      // ),
       gulp.dest(options.dest),
     )
     .on(
