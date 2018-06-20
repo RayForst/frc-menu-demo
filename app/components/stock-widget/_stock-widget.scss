@@ -1,16 +1,19 @@
 .stock-widget {
   background: #ebf0f5;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 16px;
   padding: 12px 20px;
   font-size: 13px;
-  line-height: 15px;
   width: 224px;
+  z-index: 1000;
+  transform: translateX(256px);
+  line-height: 16px;
 
   @media #{$m-tablet--wide} {
     right: 16px;
     width: auto;
+    transform: translateX(0);
   }
 
   @media #{$m-desktop} {
@@ -23,21 +26,38 @@
 
   &__difference {
     margin-left: 4px;
+    color: $c_dark-blue;
+
     &--up {
       color: #00af00;
+      padding-left: 16px;
+      position: relative;
 
       &:before {
-        content: "↑";
-        font-family: Arial, sans-serif;
+        content: "";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background: url("/img/components/stock-widget/stock-arrow-up.svg");
       }
     }
 
     &--down {
-      color: red;
+      color: $c_red;
+      padding-left: 16px;
+      position: relative;
 
       &:before {
-        content: "↓";
-        font-family: Arial, sans-serif;
+        content: "";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -3px;
+        left: 0;
+        background: url("/img/components/stock-widget/stock-arrow-down.svg");
+        transform: rotate(180deg);
       }
     }
   }

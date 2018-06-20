@@ -36,6 +36,7 @@ const getSizing = () => {
 }
 const updateBreakpoints = () => {
   const size = getSizing()
+  const windowWidth = window.innerWidth || window.clientWidth || window.clientWidth
 
   const header = $('.header')
   const logo = $('.logo svg')
@@ -45,6 +46,11 @@ const updateBreakpoints = () => {
     header.css('padding-top', size.compact[0])
     header.css('padding-bottom', size.compact[1])
     logo.css('width', size.compact[2])
+  }
+
+  if (windowWidth >= 1024 && $('body').hasClass('fixed')) {
+    $('body').removeClass('fixed')
+    $('.header__menu').removeClass('header__menu--open')
   }
 }
 

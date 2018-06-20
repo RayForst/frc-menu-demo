@@ -1,4 +1,14 @@
 .popup-menu {
+  &__submenu-wrapper {
+    &:first-of-type {
+      margin-top: 8px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 4px;
+    }
+  }
+
   &__content {
     @media #{$m-tablet--wide} {
       opacity: 0;
@@ -55,6 +65,7 @@
     &:hover > #{$this}__content {
       display: flex;
       animation: opacity 0.6s forwards;
+      box-shadow: 0px 0px 48px 0px rgba($c_dark-blue, 0.05);
     }
 
     &__title {
@@ -71,6 +82,14 @@
       text-align: center;
       padding: 0 12px;
       margin-bottom: 4px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 4px;
+      }
     }
   }
 }
