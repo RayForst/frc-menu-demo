@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         {% include "content-items/meta/_meta.twig" %}
-        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/layout.css?v=2">
         <title>
             {% block title %}Formycon{% endblock %}
         </title>
@@ -20,7 +20,7 @@
             {% include "content-items/footer/_footer.twig" %}
         {% endblock %}
 
-        <script src="./js/main.js"></script>
+        <script src="./js/main.js?v=2"></script>
         {% block script %}{% endblock %}
     </body>
 </html>
