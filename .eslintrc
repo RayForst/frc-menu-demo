@@ -1,0 +1,28 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "jquery": true,
+    "es6": true
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "functions": "never"
+      }
+    ]
+  },
+  "extends": ["prettier", "airbnb-base"]
+}

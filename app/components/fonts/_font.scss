@@ -1,0 +1,32 @@
+@import "./include";
+
+.font {
+  font-family: "ProximaNova", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+  &--it {
+    font-style: italic;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+  &--bold-it {
+    font-style: italic;
+    font-weight: bold;
+  }
+  &--light {
+    font-weight: 300;
+  }
+  &--light-it {
+    font-style: italic;
+    font-weight: 300;
+  }
+  &--semi {
+    font-weight: 600;
+  }
+  &--semi-it {
+    font-style: italic;
+    font-weight: 600;
+  }
+}

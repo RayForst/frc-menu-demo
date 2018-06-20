@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include "content-items/meta/_meta.twig" %}
+        <link rel="stylesheet" href="css/layout.css">
+        <title>
+            {% block title %}Formycon{% endblock %}
+        </title>
+    </head>
+    <body>
+        {% block header %}
+            {% include "content-items/header/_header.twig" %}
+        {% endblock %}
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        {% block footer %}
+            {% include "content-items/footer/_footer.twig" %}
+        {% endblock %}
+
+        <script src="/js/main.js"></script>
+        {% block script %}{% endblock %}
+    </body>
+</html>

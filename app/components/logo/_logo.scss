@@ -1,0 +1,12 @@
+.logo {
+  display: inline-flex;
+  &__image {
+    width: 132px;
+    height: 33px;
+
+    @media #{$m-tablet--wide} {
+      width: 176px;
+      height: 44px;
+    }
+  }
+}
